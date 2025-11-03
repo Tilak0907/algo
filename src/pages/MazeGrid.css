@@ -1,0 +1,206 @@
+/* ---------- Container ---------- */
+.maze-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 90px 20px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- Headings ---------- */
+h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+/* ---------- Controls ---------- */
+.control-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.control-row label {
+  display: flex;
+  flex-direction: column;
+  color: #eee;
+  font-size: 15px;
+  max-width: 240px;
+  width: 100%;
+}
+
+/* ---------- Dropdowns ---------- */
+select {
+  margin-top: 6px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #202038, #1a1a40);
+  color: white;
+  border: 1px solid #444;
+  appearance: none;
+  box-shadow: inset 0 0 4px #000;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  border-color: #00e5ff;
+  outline: none;
+  background: linear-gradient(to right, #26274a, #1a1a30);
+}
+
+/* ---------- Menu Toggle Button ---------- */
+.button-menu-toggle {
+  margin: 20px 0;
+}
+
+.button-menu-toggle button {
+  background: #0072ff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 114, 255, 0.4);
+}
+
+/* ---------- Mode & Action Buttons ---------- */
+.mode-buttons,
+.action-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.mode-buttons button,
+.action-buttons button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.mode-buttons button:hover,
+.action-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- Grid Scroll Wrapper ---------- */
+.grid-scroll-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- Grid ---------- */
+.grid-container {
+  display: grid;
+  gap: 2px;
+  grid-auto-rows: 30px;
+  margin-top: 20px;
+  min-width: max-content;
+  justify-content: center;
+}
+
+/* ---------- Cells ---------- */
+.cell {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  border-radius: 2px;
+  margin: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.empty  { background: #2e2e2e; border: 1px solid #444; }
+.wall   { background: #555; border: 1px solid #000; }
+.mud    { background: #5a3b1d; border: 1px solid #2c1b0e; }
+.car    { background: #c62828; border: 1px solid #5c0000; }
+.human  { background: #4a69bd; border: 1px solid #1c2d5a; }
+
+.start {
+  background: #4caf50;
+  border: 2px solid #1b5e20;
+  box-shadow: 0 0 5px 2px rgba(76, 175, 80, 0.6);
+}
+
+.end {
+  background: #f44336;
+  border: 2px solid #7f0000;
+  box-shadow: 0 0 5px 2px rgba(244, 67, 54, 0.6);
+}
+
+.path {
+  background: repeating-linear-gradient(to right, #fdd835, #fdd835 2px, #2e2e2e 2px, #2e2e2e 4px);
+  border: 1px dashed #fbc02d;
+}
+
+/* ---------- Score Box ---------- */
+.maze-result-box {
+  background: linear-gradient(to right, #1e1e2f, #282842);
+  border: 1px solid #333;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.05);
+  padding: 20px 25px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  text-align: center;
+}
+
+p{
+  margin-top: 0px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .maze-container {
+    padding: 100px 12px 20px;
+  }
+
+  .cell {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+
+  .control-row {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .mode-buttons,
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mode-buttons button,
+  .action-buttons button {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .grid-scroll-wrapper {
+    padding: 0 6px;
+  }
+}

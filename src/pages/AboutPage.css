@@ -1,0 +1,61 @@
+.about-container {
+  max-width: 800px;
+   margin-top: 150px;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #1e1e2f, #2c2c45);
+  color: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-description {
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 20px 0;
+  color: #cccccc;
+}
+
+.about-container h1 {
+  display: flex;
+  align-items: center;       /* vertical alignment */
+  justify-content: center;   /* horizontal centering */
+  gap: 10px;                  /* space between logo and text */
+  text-align: center;         /* text alignment inside container */
+}
+
+.about-container .logo {
+  height: 60px;
+  width: auto;
+}
+
+
+.developer-section h3 {
+  color: #00e5ff;
+  margin-bottom: 10px;
+}
+
+.developer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.developer-section li {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.about-footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #aaa;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .about-container .logo {
+    height: 80px; /* bigger on larger screens */
+  }
+}
