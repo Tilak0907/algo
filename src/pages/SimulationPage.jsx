@@ -650,6 +650,12 @@ await visualizePath(path, visited); // normal animation only for now
     discovered path. It indicates the overall distance or movement count.
   </li>
   <li>
+  <strong>Time Taken:</strong> Represents the total computational time required by 
+  the algorithm to discover the optimal path from the <strong>start point </strong> 
+  to the <strong>end point</strong>. It is measured in milliseconds and depends on 
+  factors such as grid size, number of obstacles, and the efficiency of the selected algorithm.
+</li>
+  <li>
     <strong>Path Cost:</strong> Calculated as the sum of individual terrain costs 
     encountered along the path. Each cell has a defined cost based on terrain type:
     <ul>
